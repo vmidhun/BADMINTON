@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 export class Players {
   'ID': number;
   'Name': string;
@@ -23,13 +24,12 @@ let players: Players[] = [
     Name: 'Chetan',
   },
 ];
-
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class GameService {
-  currentGame: any;
-  constructor() {}
+export class PlayerService {
+
+  constructor() { }
 
   getPlayers() {
     return players;
