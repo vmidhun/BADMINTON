@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PLAYER, PlayerService } from 'src/app/services/player.service';
 
 @Component({
@@ -8,17 +9,17 @@ import { PLAYER, PlayerService } from 'src/app/services/player.service';
 })
 export class AddPlayerComponent implements OnInit {
 
-  constructor(public playersService:PlayerService) { }
-  currentPlayer: PLAYER = {ID: 0, Name: '', Age: 0, Sex: "", Flat: ""}
+  constructor(public playersService: PlayerService,private router: Router) { }
+  
+  currentPlayer: PLAYER = { ID: 0, Name: '', DoB: 0, Gender: "", Flat: "" }
+  
   ngOnInit(): void {
 
   }
 
-  addPlayer = (e: any) => {
-    console.log("clicked", e)
+  addPlayer = () => {
+    this.playersService.addPlayer(this.currentPlayer);
+    this.router.navigate(['players'])
   }
-  
-// this.playersService.addPlayer = () => {    
-//   this.currentPlayer =  
 
 }
