@@ -2,12 +2,12 @@
     <form>
         <div class="p-3">
             <label for="exampleInputEmail1" class="form-label">Player Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="row p-3">
             <div class="col-4">
-                <label for="exampleInputPassword1" class="form-label">Age</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputPassword1" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-4">
                 <label for="exampleInputPassword1" class="form-label">Gender</label>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="p-3 form-check">
-            <button type="submit" class="btn btn-primary">Confirm</button>
+            <button type="submit" (click)=addPlayer($event) class="btn btn-primary">Confirm</button>
         </div>
     </form>
 </div>

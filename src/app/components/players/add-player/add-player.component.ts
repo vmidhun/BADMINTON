@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PLAYER, PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-add-player',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPlayerComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public playersService:PlayerService) { }
+  currentPlayer: PLAYER = {ID: 0, Name: '', Age: 0, Sex: "", Flat: ""}
   ngOnInit(): void {
+
   }
+
+  addPlayer = (e: any) => {
+    console.log("clicked", e)
+  }
+  
+// this.playersService.addPlayer = () => {    
+//   this.currentPlayer =  
 
 }

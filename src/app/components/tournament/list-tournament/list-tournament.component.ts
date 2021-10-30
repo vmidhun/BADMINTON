@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GameService } from 'src/app/services/game.service';
 import { TournamentService } from 'src/app/services/tournament.service';
 
@@ -9,12 +10,17 @@ import { TournamentService } from 'src/app/services/tournament.service';
 })
 export class ListTournamentComponent implements OnInit {
   Tournaments: any;
-  constructor(private tournamentService:TournamentService) { }
+  constructor(
+    private tournamentService: TournamentService,
+    public gameService: GameService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.Tournaments = this.tournamentService.getTournaments()
   }
-  viewGame = () => { }
-  goto =(url: string) => {console.log("url")}
-
+  LoadGame= (ID:number) =>{
+    this.gameService.getGame(ID);
+    this.router.navigate(['game'])
+  }
 }
