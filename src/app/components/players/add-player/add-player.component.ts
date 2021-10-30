@@ -9,7 +9,10 @@ import { PLAYER, PlayerService } from 'src/app/services/player.service';
 })
 export class AddPlayerComponent implements OnInit {
 
-  constructor(public playersService: PlayerService,private router: Router) { }
+  constructor(
+    public playersService: PlayerService,
+    private router: Router
+    ) { }
   
   currentPlayer: PLAYER = { ID: 0, Name: '', DoB: 0, Gender: "", Flat: "" }
   

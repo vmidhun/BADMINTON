@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PlayerService } from 'src/app/services/player.service';
+import { TEAMS, TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-add-team',
@@ -8,10 +10,20 @@ import { PlayerService } from 'src/app/services/player.service';
 })
 export class AddTeamComponent implements OnInit {
   players:any;
-  constructor(private playerService: PlayerService) { }
+  currentTeam: TEAMS = { ID: 0, TeamName: "", Player1: "", Player2: ""}
+
+  constructor(
+    private playerService: PlayerService,
+    private teamService: TeamService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.players = this.playerService.getPlayers();
+  }
+  addTeam = () => {
+    this.teamService.addTeam(this.currentTeam);
+    this.router.navigate(['teams'])
   }
 
 }

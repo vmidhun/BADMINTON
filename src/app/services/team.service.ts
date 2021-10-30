@@ -39,8 +39,17 @@ let teams: TEAMS[] = [
 export class TeamService {
   constructor() { }
 
-  getTeams() {
+  getTeams = () => {
     return teams;
+  }
+  addTeam = (team: TEAMS) => {    
+    let id = { 'ID': teams.length + 1}  
+
+    let valueToSave = {
+      ...team,
+      ...id
+    }
+    teams.push(valueToSave)
   }
 
 }
