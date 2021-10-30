@@ -11,7 +11,7 @@ import { GameComponent } from './components/game/game.component';
 import { ListTournamentComponent } from './components/tournament/list-tournament/list-tournament.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'tournament', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'players', component: ListPlayersComponent },
   { path: 'player/add', component: AddPlayerComponent },
