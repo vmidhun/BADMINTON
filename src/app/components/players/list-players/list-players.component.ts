@@ -10,12 +10,13 @@ import { PlayerService } from 'src/app/services/player.service';
 export class ListPlayersComponent implements OnInit {
 
   players: any = [];
-  constructor(public router: Router, public playersService:PlayerService) { }
 
+  constructor(public router: Router, public playersService: PlayerService) { }
+  
   ngOnInit(): void {
     this.players = this.playersService.getPlayers();
   }
-
+  
   goto = (url: string) => { this.router.navigate([url])}
 
 }

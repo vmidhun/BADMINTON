@@ -11,6 +11,9 @@ import { GameService } from '../../services/game.service';
 })
 export class GameComponent implements OnInit {
 
+  selectedGame: any;
+
+  
   gamePlayers: any;
   isActive: boolean = false;
 
