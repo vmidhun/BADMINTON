@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 
-export class Players {
+export class PLAYER {
   'ID': number;
   'Name': string;
   'Age': number;
@@ -25,4 +25,9 @@ export class PlayerService {
   getPlayers() {
     return players;
   }
+
+  addPlayer = (player:PLAYER) => {
+    players.push(player)
+  }
+
 }

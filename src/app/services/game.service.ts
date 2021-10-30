@@ -95,8 +95,7 @@ export class GameService {
   getGame = (ID: any) => {
     var result = Games.find(obj => {return obj.ID === ID})
     this.selectedGame = result;
-    console.log(this.selectedGame)
     return result;
   }
-  getGames = () => { return Games }
+  getGames = () => { return Games }  
 }
