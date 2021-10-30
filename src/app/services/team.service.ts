@@ -15,19 +15,19 @@ let teams: TEAMS[] = [
     Player2: 'Anil Gowda',
   },
   {
-    ID: 1,
+    ID: 2,
     TeamName: 'Team B',
     Player1: 'Chandru (S)',
     Player2: 'Chandru(H)',
   },
   {
-    ID: 1,
+    ID: 3,
     TeamName: 'Team C',
     Player1: 'Navachetan',
     Player2: 'Anil',
   },
   {
-    ID: 1,
+    ID: 4,
     TeamName: 'Team D',
     Player1: 'Lova',
     Player2: 'Anil Sreedharan',
@@ -37,6 +37,10 @@ let teams: TEAMS[] = [
   providedIn: 'root'
 })
 export class TeamService {
-
   constructor() { }
+
+  getTeams() {
+    return teams;
+  }
+
 }

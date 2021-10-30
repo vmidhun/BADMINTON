@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col" class="text-center">Tournaments</th>
+            <th scope="col">Category</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tour of Tournaments; let i = index">
+            <td>{{i+1}}</td>
+            <td class="text-center">
+                <h4>{{tour.Team1.TeamName}}</h4> V/s
+                <h4>{{tour.Team2.TeamName}}</h4>
+            </td>
+            <td>{{tour.Category}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="viewGame();">View</button></td>
+        </tr>
+    </tbody>
+</table>
