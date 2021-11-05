@@ -1,19 +1,50 @@
-<!-- Toolbar -->
+<p>
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+     <mat-icon>share</mat-icon>
+   </button>
+    </mat-toolbar>
+</p>
+
 <div class="toolbar" role="banner">
     <img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
     />
     <span>Badminton</span>
     <div class="text-end">
+
         <ul class="nav nav-pills">
-            <li class=" nav-item ">
+            <!-- <li class="nav-item ">
+                <a class="nav-link " routerLink="tournaments">Tournaments</a>
+            </li> -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="tournaments" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Tournaments
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink="tournaments/add">Add</a></li>
+                    <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+            </li>
+            <!-- <li class=" nav-item ">
                 <a class="nav-link " routerLink="players">Player</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link " routerLink="teams">Teams</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link " routerLink="tournament">Tournament</a>
-            </li>
+            </li> -->
+            <!-- <li class="nav-item ">
+                <a class="nav-link " routerLink="matches">Matches</a>
+            </li> -->
+
             <!-- <li class="nav-item ">
             <a class="nav-link " routerLink="Profile ">User</a>
         </li> -->

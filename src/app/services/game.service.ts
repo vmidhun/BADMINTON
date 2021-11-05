@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { PlayerService } from './player.service';
 
 export class DOUBLES_GAME {
-  'ID': number;
+  'ID': string;
+  'Tournament_ID': string;
   'StartTime': string;
   'EndTime' : string;
   'Team1': TEAM;
@@ -30,9 +31,11 @@ export class GAME_MOVES {
 
   let Games: DOUBLES_GAME[] = [
     {
-      ID: 1,
+      ID: "1",
+      Tournament_ID:"",
       StartTime: "2013-03-11 11:35:24",
       EndTime: "2013-03-11 11:35:24",
+      TossWinner:"",
       Team1: {
         'player1_ID': "string",
         'player1_Name': "string",
@@ -45,7 +48,6 @@ export class GAME_MOVES {
         'player2_ID': "string",
         'player2_Name': "string"
       },
-      TossWinner:"",
       GameMoves: [{
         'LeftTopPlayer': "",
         'LeftBottomPlayer': "",
@@ -57,9 +59,11 @@ export class GAME_MOVES {
       },]
     },
     {
-      ID: 2,
+      ID: "2",
+      Tournament_ID:"",
       StartTime: "2013-03-11 11:35:24",
       EndTime: "2013-03-11 11:35:24",
+      TossWinner:"",
       Team1: {
         'player1_ID': "string",
         'player1_Name': "string",
@@ -72,7 +76,6 @@ export class GAME_MOVES {
         'player2_ID': "string",
         'player2_Name': "string"
       },
-      TossWinner:"",
       GameMoves: [{
         'LeftTopPlayer': "",
         'LeftBottomPlayer': "",
@@ -90,6 +93,7 @@ export class GAME_MOVES {
 })
 export class GameService {
   selectedGame: any;
+
   constructor(private playerService: PlayerService,) { }
   
   getGame = (ID: any) => {
@@ -97,5 +101,5 @@ export class GameService {
     this.selectedGame = result;
     return result;
   }
-  getGames = () => { return Games }  
+ 
 }
