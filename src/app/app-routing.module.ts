@@ -14,7 +14,7 @@ import { AddMatchComponent } from './components/match/add-match/add-match.compon
 import { AddTournamentComponent } from './components/tournament/add-tournament/add-tournament.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tournament', pathMatch: 'full' },
+  { path: '', redirectTo: 'tournaments', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'users', component: ListUsersComponent },
   { path: 'teams', component: TeamListComponent },   

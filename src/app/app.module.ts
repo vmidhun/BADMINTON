@@ -24,9 +24,13 @@ import { ListMatchComponent } from './components/match/list-match/list-match.com
 import { AddMatchComponent } from './components/match/add-match/add-match.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatIconModule} from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatInputModule } from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 @NgModule({
@@ -47,16 +51,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AddMatchComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     BrowserAnimationsModule,
+    MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    NgbModule
-    
+    MatInputModule,
+    MatSlideToggleModule    
   ],
   providers: [],
   bootstrap: [AppComponent],
