@@ -17,7 +17,7 @@ export class TournamentService {
     this.Tournaments = db.list(this.dbPath);
   }
 
-  getAll(): AngularFireList<Tournament> {
+  getTournaments(): AngularFireList<Tournament> {
     return this.Tournaments;
   }
 

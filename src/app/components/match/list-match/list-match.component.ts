@@ -27,23 +27,28 @@ export class ListMatchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //this.Tournaments = this.tournamentService.getTournaments();
-    this.loadMathches();
+    this.Tournaments = this.matchService.getMatches();
+    //this.loadMathches();
   }
-  onChange = (tourname:any) => {
-    console.log(tourname);
-   // this. Matches = this.matchService.getMatchesByTournament(tourname.ID)
+
+  addMatch = () => {
+    this.router.navigate(["match/add"]);
+  };
+
+  // onChange = (tourname:any) => {
+  //   console.log(tourname);
+  //  // this. Matches = this.matchService.getMatchesByTournament(tourname.ID)
     
-  }
+  // }
   LoadGame= (ID:number) =>{
-    this.gameService.getGame(ID);
-    this.router.navigate(['game'])
+    // this.gameService.getGame(ID);
+    // this.router.navigate(['game'])
   }
   
-  loadMathches(): void {
-   // const ID = this.route.snapshot.paramMap.get('ID')
-   // console.log("ListMatchComponent loadMatches ID", ID)
-    // this.matchService.getMatchesByTournament(ID)
-    //   .subscribe(matches => this.Matches = matches);
-  }
+  // loadMathches(): void {
+  //  // const ID = this.route.snapshot.paramMap.get('ID')
+  //  // console.log("ListMatchComponent loadMatches ID", ID)
+  //   // this.matchService.getMatchesByTournament(ID)
+  //   //   .subscribe(matches => this.Matches = matches);
+  // }
 }

@@ -1,27 +1,18 @@
 <div class="container-fluid">
     <div class="submit-form">
         <div *ngIf="!submitted">
-            <div class="form-group">
-
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label>Tournament Title</mat-label>
-                    <input matInput placeholder="" class="form-control no-outline" id="title" required [(ngModel)]="tournament.title" name="title" autocomplete="off">
-                </mat-form-field>
-
-                <!-- <input type="text" class="form-control" id="title" required [(ngModel)]="tournament.title" name="title" /> -->
+            <div class="text-center">
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter a name for the Tournament</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tournament Name" [(ngModel)]="tournament.title"
+                        name="title">
+                      </div>
+                </div>
+                <div class="form-group mt-2">
+                    <button type="button" class="btn btn-dark" (click)="saveTournament()">Create Tournament</button>
+                </div>
             </div>
-
-            <div class="form-group">
-                <button mat-flat-button color="primary" (click)="saveTournament()">Create Tournament</button>
-            </div>
-
-        </div>
-
-        <div *ngIf="submitted">
-            <h4>You submitted successfully!</h4>
-            <button class="btn btn-success" (click)="newTournament()">Add</button>
-            <button mat-flat-button color="primary" (click)="saveTournament()">Create Tournament</button>
         </div>
     </div>
-
 </div>

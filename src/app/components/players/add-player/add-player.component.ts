@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PLAYER, PlayerService } from 'src/app/services/player.service';
+import { Player} from '../../../models/player.model'
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-add-player',
@@ -14,7 +15,7 @@ export class AddPlayerComponent implements OnInit {
     private router: Router
     ) { }
   
-  currentPlayer: PLAYER = { ID: 0, Name: '', DoB: 0, Gender: "", Flat: "" }
+  currentPlayer: Player = { ID: 0, Name: '', DoB: 0, Gender: "", Flat: "" }
   
   ngOnInit(): void {
 

@@ -22,3 +22,9 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
+
+.add-btn-round {
+    bottom: 20px;
+    right: 20px;
+    position: fixed!important; 
+}

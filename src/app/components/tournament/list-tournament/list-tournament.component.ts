@@ -29,7 +29,7 @@ export class ListTournamentComponent implements OnInit, OnChanges {
   };
   message = "";
 
-  tournaments?: Tournament[];
+  tournaments?: Tournament[] | undefined;
 
   currentIndex = -1;
 
@@ -61,13 +61,14 @@ export class ListTournamentComponent implements OnInit, OnChanges {
         )
       )
       .subscribe((data) => {
+        console.log(data)
         this.tournaments = data;
       });
   }
 
   setActiveTournament(tournament: Tournament, index: number): void {
     this.currentTournament = tournament;
-    this.currentIndex = index;
+    this.router.navigate(["matches"]);
   }
 
   addTournament = () => {
