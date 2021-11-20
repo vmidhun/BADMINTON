@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Team } from '../../../models/team.model';
 import { PlayerService } from 'src/app/services/player.service';
-import { TEAMS, TeamService } from 'src/app/services/team.service';
+import { TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-add-team',
@@ -10,7 +11,7 @@ import { TEAMS, TeamService } from 'src/app/services/team.service';
 })
 export class AddTeamComponent implements OnInit {
   players:any;
-  currentTeam: TEAMS = { ID: 0, TeamName: "", Player1: "", Player2: ""}
+  currentTeam: Team = { ID: 0, TeamName: "", Player1: "", Player2: ""}
 
   constructor(
     private playerService: PlayerService,
